@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Recap — Testing analytics for your AI prototypes</title>
-  <meta name="description" content="Drop-in usability analytics for prototypes built with Claude, Cursor, v0, and other AI tools. One script tag. No backend. No setup. Maze for your Claude prototypes.">
+  <meta name="description" content="Drop-in usability analytics for prototypes built with Claude, Cursor, v0, and other AI tools. One script tag. No backend. No setup.">
 
   <!-- Open Graph -->
   <meta property="og:title"       content="Recap — Testing analytics for your AI prototypes">
@@ -19,14 +19,9 @@
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-  <!--
-    Tailwind CDN (play CDN) — included per spec for typography utilities.
-    Preflight disabled; all base styles live in style.css.
-  -->
-  <script>
-    tailwind.config = { corePlugins: { preflight: false } };
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -38,8 +33,9 @@
       <div class="header-inner">
         <a href="/" class="wordmark" data-ut-label="Recap wordmark">Recap</a>
         <nav>
-          <a href="https://github.com/colourandcode1/recap-ux"      data-ut-label="GitHub nav link">GitHub</a>
-          <a href="https://www.npmjs.com/package/recap-ux"          data-ut-label="npm nav link">npm</a>
+          <a href="how-it-works.html"                             data-ut-label="How it works nav link">How it works</a>
+          <a href="https://github.com/colourandcode1/recap"    data-ut-label="GitHub nav link">GitHub</a>
+          <a href="https://www.npmjs.com/package/recap-ux"        data-ut-label="npm nav link">npm</a>
         </nav>
       </div>
     </div>
@@ -50,7 +46,11 @@
     <div class="container">
 
       <!-- Hero -->
+      <span class="eyebrow">Open source · MIT licensed</span>
+
       <h1>Testing analytics for your AI&nbsp;prototypes.</h1>
+
+      <p class="lede">Recap is drop-in usability analytics for prototypes built with Claude, Cursor, v0, or any other AI tool. One script tag. No backend. No accounts. Maze, but for the thing AI built you in five minutes.</p>
 
       <!--
         Install snippet — click anywhere on the block to copy.
@@ -68,55 +68,13 @@
         <span class="copy-label">Copy</span>
       </div>
 
-      <p>Recap is drop-in usability analytics for the prototypes you build with Claude, Cursor, v0, or any other AI tool. It captures clicks, scroll depth, and navigation, then renders heatmaps you can review locally — no backend, no accounts, no setup. Maze, but for the things AI built you in five minutes.</p>
-
       <!-- Live demo line -->
       <p class="live-demo-line">Recap is running on this page right now. Click around. Then press <kbd>Alt+Shift+R</kbd>.</p>
 
 
-      <!-- Why it exists ──────────────────────────────────── -->
-      <h2>Why it exists</h2>
-
-      <p>You can build a working prototype in Claude or v0 in ten minutes. You can share it with a tester in another ten. But the moment you want to know what they actually did — where they hesitated, what they clicked, where they got stuck — you hit a wall. Maze and Lookback assume you have a "real" website on a "real" domain with engineering support. Hotjar wants you to install a backend. None of them care about the throwaway prototype you spun up to test a single hypothesis on a Tuesday afternoon.</p>
-
-      <p>Recap fits the gap. One script tag, no build step, no server. It records what your testers do directly in their browser and gives you the data back as a heatmap, a session timeline, or a structured JSON file you can paste straight into Claude for analysis.</p>
-
-
-      <!-- How you use it ─────────────────────────────────── -->
-      <h2>How you use it</h2>
-
-      <ol>
-        <li>Add the script tag to your prototype (one line, no config required)</li>
-        <li>Share the prototype link with your testers</li>
-        <li>Testers click around — Recap silently records everything in their browser</li>
-        <li>Open the prototype yourself, press <kbd>Alt+Shift+R</kbd>, and review the heatmap</li>
-        <li>Export the session as JSON and paste it into Claude for instant UX analysis</li>
-      </ol>
-
-      <p>For remote unmoderated testing, switch to participant mode — testers get a "finish test" pill and a download button, then email you the session file.</p>
-
-
-      <!-- What it captures ───────────────────────────────── -->
-      <h2>What it captures</h2>
-
-      <ul>
-        <li>Click positions with auto-generated CSS selectors and semantic element labels</li>
-        <li>Scroll depth per page, both milestone and continuous</li>
-        <li>Navigation flow — which pages they visited, in what order, for how long</li>
-        <li>Interaction patterns — hesitation, rapid clicks, backtracking, ignored regions</li>
-        <li>Page region heatmaps showing the parts of your UI that get attention and the parts that don't</li>
-      </ul>
-
-      <p>It does not capture: cookies, IP addresses, form values, text content, screenshots, or anything else that could identify your tester. There's no way to make it capture those things. The privacy is structural, not configurable.</p>
-
-
       <!-- Try it ─────────────────────────────────────────── -->
-      <h2>Try it</h2>
-
-      <p>Recap is active on this page. Try clicking the elements below — then press <kbd>Alt+Shift+R</kbd> to see your own session as a heatmap.</p>
-
       <div class="try-demo">
-        <p>Click any of these:</p>
+        <p>Click any of these, then press <kbd>Alt+Shift+R</kbd> to see them as a heatmap:</p>
 
         <div class="demo-buttons">
           <button class="btn-primary"   data-ut-label="Primary button">Primary</button>
@@ -124,81 +82,29 @@
           <button class="btn-tertiary"  data-ut-label="Tertiary button">Tertiary</button>
         </div>
 
-        <p>Or this <button class="inline-action" data-ut-label="Inline action">inline action</button> in the middle of a sentence. Or this unlabelled square: <button class="mystery-square" aria-label=""></button> that doesn't tell you what it does.</p>
+        <p>Or this <button class="inline-action" data-ut-label="Inline action">inline action</button> in the middle of a sentence. Or this unlabelled square: <button class="mystery-square" aria-label=""></button></p>
 
         <p>Type something here (Recap won't capture the value): <input type="text" data-ut-no-track placeholder="Anything…" /></p>
       </div>
 
-      <p>The clicks you just made are now in your local Recap session. Press <strong>Alt+Shift+R</strong> to open the researcher panel and see them rendered as a heatmap on top of this page.</p>
 
+      <!-- Highlights (condensed from the full "what it captures" list) -->
+      <dl class="highlights">
+        <div class="highlight">
+          <dt>Clicks</dt>
+          <dd>Positions, selectors, and semantic labels for everything tapped.</dd>
+        </div>
+        <div class="highlight">
+          <dt>Scroll</dt>
+          <dd>Depth per page, milestone and continuous.</dd>
+        </div>
+        <div class="highlight">
+          <dt>Navigation</dt>
+          <dd>Which pages, in what order, for how long.</dd>
+        </div>
+      </dl>
 
-      <!-- Talk to your sessions (AI part) ────────────────── -->
-      <h2>Talk to your sessions</h2>
-
-      <p>Recap exports each session as a structured JSON summary designed for AI analysis. It's not raw coordinates — it's a human-readable timeline of what the participant did, where they hesitated, where they got frustrated, and where they backtracked.</p>
-
-      <p>Click "Export for AI" in the researcher panel, paste the result into Claude, and you get a UX review back in seconds. The export includes a ready-to-use prompt template.</p>
-
-<pre><code>{
-  "timeline": [
-    {
-      "timestamp": 7.8,
-      "action": "Clicked 'View Reports' after 7.8s of hesitation",
-      "context": "First click on page — possible confusion"
-    },
-    {
-      "timestamp": 12.4,
-      "action": "Clicked unlabelled element 4 times in 1.8s",
-      "context": "Rapid clicks — potential frustration"
-    }
-  ]
-}</code></pre>
-
-
-      <!-- Two modes ──────────────────────────────────────── -->
-      <h2>Two modes</h2>
-
-      <p>Recap runs in one of two modes, switched with a single attribute.</p>
-
-      <p><strong>Researcher mode</strong> is the default. You — the designer — open your own prototype and press <kbd>Alt+Shift+R</kbd> to see heatmaps. Use this when you're iterating locally or running in-person tests.</p>
-
-      <p><strong>Participant mode</strong> is for remote unmoderated testing. Testers see a small "finish test" pill in the corner of the prototype throughout the session. When they're done — or when they get stuck and want to bail out — they download a session file and email it back. You import the file into your researcher panel and review it like any other session.</p>
-
-<pre><code>&lt;!-- For your own use --&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/recap-ux@1/dist/recap.min.js"&gt;&lt;/script&gt;
-
-&lt;!-- For remote testing --&gt;
-&lt;script
-  src="https://cdn.jsdelivr.net/npm/recap-ux@1/dist/recap.min.js"
-  data-mode="participant"
-  data-end-message="Please email the file to research@example.com"
-&gt;&lt;/script&gt;</code></pre>
-
-
-      <!-- Privacy ────────────────────────────────────────── -->
-      <h2>Privacy</h2>
-
-      <p>Recap collects no personal data. None. Not because we promise we won't, but because there's nowhere for it to go — Recap has no backend. Every byte of session data lives in the participant's browser until they explicitly download it.</p>
-
-      <p>That means no cookies, no IP logging, no fingerprinting, no consent banners, no data processing agreements, no GDPR controller obligations. Recap operates on the same legal footing as a pencil and paper. We built it this way because the alternative — collecting data, storing it somewhere, hoping nothing leaks — is the wrong shape for a tool used to test prototypes with real people.</p>
-
-
-      <!-- Best practices ─────────────────────────────────── -->
-      <h2>Best practices</h2>
-
-      <ul>
-        <li>Add <code>data-ut-label="Submit assessment"</code> to ambiguous elements so they appear meaningfully in the heatmap and AI export, instead of as "unlabelled DIV"</li>
-        <li>Use <code>data-ut-no-track</code> on sensitive inputs to exclude them entirely</li>
-        <li>Run the same test on at least three participants before drawing conclusions — heatmaps tell stories more clearly with multiple sessions</li>
-        <li>For remote testing, write a short, clear <code>data-end-message</code> that tells the participant exactly what to do with the downloaded file</li>
-        <li>Pair Recap with a moderated session whenever possible — the heatmap shows you what they did, but a conversation tells you why</li>
-      </ul>
-
-
-      <!-- Licensing ──────────────────────────────────────── -->
-      <h2>Licensing</h2>
-
-      <p>Recap is MIT licensed and free for any use — personal projects, commercial work, internal tools, client work. You can fork it, modify it, embed it in other tools, or ship it as part of a product you sell. There are no restrictions, no plans, and no paid tier. If it breaks, file an issue. If you like it, tell someone.</p>
+      <p class="cta-line"><a href="how-it-works.html" data-ut-label="How it works CTA link">Read how it works →</a></p>
 
     </div><!-- /.container -->
   </main>
@@ -206,7 +112,7 @@
   <!-- ── Footer ──────────────────────────────────────────── -->
   <footer>
     <div class="container">
-      <p>Made by <a href="https://github.com/colourandcode1" data-ut-label="Tony Craig footer link">Tony Craig</a>. Source on <a href="https://github.com/colourandcode1/recap-ux" data-ut-label="GitHub footer link">GitHub</a>.</p>
+      <p>Made by <a href="https://github.com/colourandcode1" data-ut-label="Tony Craig footer link">Tony Craig</a>. Source on <a href="https://github.com/colourandcode1/recap" data-ut-label="GitHub footer link">GitHub</a>.</p>
     </div>
   </footer>
 

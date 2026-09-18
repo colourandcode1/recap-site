@@ -62,7 +62,7 @@
       indicator.className = 'click-indicator';
       indicator.textContent = ' ✓';
       indicator.style.cssText =
-        'color:#0066cc;font-size:0.875em;margin-left:3px;' +
+        'color:#131313;font-size:0.875em;margin-left:3px;' +
         'opacity:0;transition:opacity 0.15s;pointer-events:none;';
 
       btn.parentNode.insertBefore(indicator, btn.nextSibling);
