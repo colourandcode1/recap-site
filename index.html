@@ -18,6 +18,8 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/recap-fav.png">
+  <link rel="apple-touch-icon" href="assets/recap-fav.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,11 +33,11 @@
   <header>
     <div class="container">
       <div class="header-inner">
-        <a href="/" class="wordmark" data-ut-label="Recap wordmark">Recap</a>
+        <a href="/" class="logo-mark" data-ut-label="Recap wordmark"><img src="assets/recap-fav.svg" alt="Recap"></a>
         <nav>
           <a href="how-it-works.html"                             data-ut-label="How it works nav link">How it works</a>
-          <a href="https://github.com/colourandcode1/recap"    data-ut-label="GitHub nav link">GitHub</a>
           <a href="https://www.npmjs.com/package/recap-ux"        data-ut-label="npm nav link">npm</a>
+          <a href="https://github.com/colourandcode1/recap" class="nav-cta" data-ut-label="GitHub CTA link">GitHub</a>
         </nav>
       </div>
     </div>
@@ -46,45 +48,38 @@
     <div class="container">
 
       <!-- Hero -->
-      <span class="eyebrow">Open source · MIT licensed</span>
+      <div class="hero">
+        <span class="hero-badge">Open source · Hotjar alternative</span>
 
-      <h1>Testing analytics for your AI&nbsp;prototypes.</h1>
+        <h1>Testing analytics for your AI&nbsp;prototypes.</h1>
 
-      <p class="lede">Recap is drop-in usability analytics for prototypes built with Claude, Cursor, v0, or any other AI tool. One script tag. No backend. No accounts. Maze, but for the thing AI built you in five minutes.</p>
+        <p class="lede">Recap is drop-in usability analytics for prototypes built with Claude, Cursor, v0, or any other AI tool. One script tag. No backend. No accounts. Maze, but for the thing AI built you in five minutes.</p>
 
-      <!--
-        Install snippet — click anywhere on the block to copy.
-        JS reads .textContent so HTML entities decode automatically.
-      -->
-      <div
-        class="install-snippet"
-        id="install-snippet"
-        role="button"
-        tabindex="0"
-        aria-label="Copy install snippet to clipboard"
-        data-ut-label="Install snippet copy block"
-      >
-        <code>&lt;script src="https://cdn.jsdelivr.net/npm/recap-ux@1/dist/recap.min.js"&gt;&lt;/script&gt;</code>
-        <span class="copy-label">Copy</span>
+        <!-- Primary CTA — opens the Recap panel directly, same as Alt+Shift+R -->
+        <div class="hero-ctas">
+          <button
+            class="btn-hero-primary"
+            id="open-panel-btn"
+            data-ut-label="Open Recap panel button"
+          >
+            Open Recap panel
+          </button>
+          <a class="btn-hero-secondary" href="how-it-works.html" data-ut-label="How it works hero link">How it works</a>
+        </div>
+
+        <!-- Live demo line -->
+        <p class="live-demo-line">Recap is running on this page right now. Click around. Then press <kbd>Alt+Shift+R</kbd>.</p>
       </div>
-
-      <!-- Live demo line -->
-      <p class="live-demo-line">Recap is running on this page right now. Click around. Then press <kbd>Alt+Shift+R</kbd>.</p>
 
 
       <!-- Try it ─────────────────────────────────────────── -->
       <div class="try-demo">
-        <p>Click any of these, then press <kbd>Alt+Shift+R</kbd> to see them as a heatmap:</p>
+        <p>Click these a few times, then press <kbd>Alt+Shift+R</kbd> to see the heatmap:</p>
 
         <div class="demo-buttons">
-          <button class="btn-primary"   data-ut-label="Primary button">Primary</button>
-          <button class="btn-secondary" data-ut-label="Secondary button">Secondary</button>
-          <button class="btn-tertiary"  data-ut-label="Tertiary button">Tertiary</button>
+          <button class="btn-primary"   data-ut-label="Primary button">Primary <span class="click-count" aria-hidden="true">(0)</span></button>
+          <button class="btn-secondary" data-ut-label="Secondary button">Secondary <span class="click-count" aria-hidden="true">(0)</span></button>
         </div>
-
-        <p>Or this <button class="inline-action" data-ut-label="Inline action">inline action</button> in the middle of a sentence. Or this unlabelled square: <button class="mystery-square" aria-label=""></button></p>
-
-        <p>Type something here (Recap won't capture the value): <input type="text" data-ut-no-track placeholder="Anything…" /></p>
       </div>
 
 
@@ -112,7 +107,7 @@
   <!-- ── Footer ──────────────────────────────────────────── -->
   <footer>
     <div class="container">
-      <p>Made by <a href="https://github.com/colourandcode1" data-ut-label="Tony Craig footer link">Tony Craig</a>. Source on <a href="https://github.com/colourandcode1/recap" data-ut-label="GitHub footer link">GitHub</a>.</p>
+      <p>Created by <a href="https://www.tonycraig.co" data-ut-label="Tony Craig footer link">Tony Craig</a>. Source on <a href="https://github.com/colourandcode1/recap" data-ut-label="GitHub footer link">GitHub</a>.</p>
     </div>
   </footer>
 
