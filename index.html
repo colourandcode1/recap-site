@@ -67,6 +67,10 @@
           <a class="btn-hero-secondary" href="how-it-works.html" data-ut-label="How it works hero link">How it works</a>
         </div>
 
+        <!-- Platform / install line -->
+        <p class="platform-line">Works on Claude, Cursor, v0, Framer, and Vercel previews · under 10KB</p>
+        <p class="install-hint"><code>npm install recap-ux</code></p>
+
         <!-- Live demo line -->
         <p class="live-demo-line">Recap is running on this page right now. Click around. Then press <kbd>Alt+Shift+R</kbd>.</p>
       </div>
@@ -101,6 +105,94 @@
 
       <p class="cta-line"><a href="how-it-works.html" data-ut-label="How it works CTA link">Read how it works →</a></p>
 
+      <!-- Value headline -->
+      <div class="section-intro">
+        <h2>A Hotjar alternative that never leaves the room.</h2>
+        <p>No cookies. No accounts. Nothing leaves the device unless they export it.</p>
+      </div>
+
+      <!-- Feature grid -->
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>No Backend</h3>
+          <p>Click heatmaps, scroll depth, and session capture — zero cookies, zero accounts.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Built for AI Prototypes</h3>
+          <p>A script tag under 10KB. Drops into Claude artefacts, Vercel previews, and Framer mocks.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Export for AI</h3>
+          <p>A written narrative Claude or ChatGPT can reason about, not raw x/y coordinates.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Open Source <span class="feature-tag">MIT</span></h3>
+          <p>MIT-licensed on npm as recap-ux. No subscription, fully auditable.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Mobile &amp; Web</h3>
+          <p>Alt+Shift+R on desktop. A hidden three-finger hold on phone and tablet.</p>
+        </div>
+      </div>
+
+      <!-- Tour: one trigger, three places -->
+      <div class="section-intro">
+        <h2>One trigger, three places.</h2>
+        <p>The same heatmap and session capture, wherever the test is actually happening.</p>
+      </div>
+
+      <div class="tour">
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="desktop" role="tab" aria-selected="true" data-ut-label="Tour tab: Desktop">Desktop</button>
+          <button class="tab" data-tab="mobile" role="tab" aria-selected="false" data-ut-label="Tour tab: Mobile & Tablet">Mobile &amp; Tablet</button>
+          <button class="tab" data-tab="prototype" role="tab" aria-selected="false" data-ut-label="Tour tab: AI Prototype">AI Prototype</button>
+        </div>
+        <div class="tour-panel">
+          <p class="tour-caption" data-tab-content="desktop">Press <kbd>Alt+Shift+R</kbd> and the panel opens instantly — no on-screen trigger for the participant to notice.</p>
+          <p class="tour-caption" data-tab-content="mobile" hidden>A hidden three-finger hold, 1.5 seconds. Same panel, no visible button.</p>
+          <p class="tour-caption" data-tab-content="prototype" hidden>Drop the script tag into a Claude artefact, Vercel preview, or Framer mock — the panel is already there.</p>
+        </div>
+      </div>
+
+      <!-- Environment grid -->
+      <div class="section-intro">
+        <h2>Runs anywhere a prototype does.</h2>
+        <p>Claude artefacts, Vercel previews, Framer, v0, Replit, or your own local dev server — if it renders in a browser, Recap can watch it.</p>
+      </div>
+
+      <div class="env-grid">
+        <span class="env-item">Claude</span>
+        <span class="env-item">Vercel</span>
+        <span class="env-item">Framer</span>
+        <span class="env-item">v0</span>
+        <span class="env-item">Replit</span>
+        <span class="env-item">CodeSandbox</span>
+        <span class="env-item">Lovable</span>
+        <span class="env-item">localhost</span>
+      </div>
+
+      <!-- Technical credibility band -->
+      <div class="section-intro">
+        <h2>Ten kilobytes. Zero servers.</h2>
+        <p>One script tag, no build step, no backend to run or pay for. Every capture stays on the participant's machine until they choose to export it.</p>
+      </div>
+
+      <div class="pill-row">
+        <span class="pill-badge">&lt;10KB script</span>
+        <span class="pill-badge">MIT licensed</span>
+        <span class="pill-badge">No backend</span>
+      </div>
+
+      <!-- Closing CTA -->
+      <div class="closing-cta">
+        <h2>Start testing your AI prototypes.</h2>
+        <div class="install-line">
+          <code>npm install recap-ux</code>
+          <button class="copy-btn" id="copy-install-btn" type="button" data-ut-label="Copy install command">Copy</button>
+        </div>
+        <p class="closing-sub">Free &amp; open source · MIT licensed · <a href="https://github.com/colourandcode1/recap" data-ut-label="GitHub closing CTA link">GitHub</a></p>
+      </div>
+
     </div><!-- /.container -->
   </main>
 
@@ -108,6 +200,7 @@
   <footer>
     <div class="container">
       <p>Created by <a href="https://www.tonycraig.co" data-ut-label="Tony Craig footer link">Tony Craig</a>. Source on <a href="https://github.com/colourandcode1/recap" data-ut-label="GitHub footer link">GitHub</a>.</p>
+      <p class="footer-copyright">© 2026 Recap.</p>
     </div>
   </footer>
 
