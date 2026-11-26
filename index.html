@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Recap — Testing analytics for your AI prototypes</title>
-  <meta name="description" content="Drop-in usability analytics for prototypes built with Claude, Cursor, v0, and other AI tools. One script tag. No backend. No setup.">
+  <title>Recap — Open source Hotjar for AI prototypes</title>
+  <meta name="description" content="Drop-in usability analytics for prototypes built with Claude, Cursor, v0, and other AI tools. One script tag. No backend. No accounts.">
 
   <!-- Open Graph -->
-  <meta property="og:title"       content="Recap — Testing analytics for your AI prototypes">
+  <meta property="og:title"       content="Recap — Open source Hotjar for AI prototypes">
   <meta property="og:description" content="Drop-in usability analytics for prototypes built with Claude, Cursor, v0, and other AI tools.">
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://recap-ux.com">
@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -35,7 +35,6 @@
       <div class="header-inner">
         <a href="/" class="logo-mark" data-ut-label="Recap wordmark"><img src="assets/recap-fav.svg" alt="Recap"></a>
         <nav>
-          <a href="how-it-works.html"                             data-ut-label="How it works nav link">How it works</a>
           <a href="https://www.npmjs.com/package/recap-ux"        data-ut-label="npm nav link">npm</a>
           <a href="https://github.com/colourandcode1/recap" class="nav-cta" data-ut-label="GitHub CTA link">GitHub</a>
         </nav>
@@ -49,45 +48,34 @@
 
       <!-- Hero -->
       <div class="hero">
-        <span class="hero-badge">Open source · Hotjar alternative</span>
+        <h1>Open source Hotjar for AI&nbsp;prototypes.</h1>
 
-        <h1>Testing analytics for your AI&nbsp;prototypes.</h1>
+        <p class="lede">Heatmaps, Scroll depth and flows all tracked inside your prototype. Just add one line of code.</p>
 
-        <p class="lede">Recap is drop-in usability analytics for prototypes built with Claude, Cursor, v0, or any other AI tool. One script tag. No backend. No accounts. Maze, but for the thing AI built you in five minutes.</p>
-
-        <!-- Primary CTA — opens the Recap panel directly, same as Alt+Shift+R -->
         <div class="hero-ctas">
           <button
             class="btn-hero-primary"
             id="open-panel-btn"
-            data-ut-label="Open Recap panel button"
+            data-ut-label="Try the live demo button"
           >
-            Open Recap panel
+            Open Recap
           </button>
-          <a class="btn-hero-secondary" href="how-it-works.html" data-ut-label="How it works hero link">How it works</a>
-        </div>
-
-        <!-- Platform / install line -->
-        <p class="platform-line">Works on Claude, Cursor, v0, Framer, and Vercel previews · under 10KB</p>
-        <p class="install-hint"><code>npm install recap-ux</code></p>
-
-        <!-- Live demo line -->
-        <p class="live-demo-line">Recap is running on this page right now. Click around. Then press <kbd>Alt+Shift+R</kbd>.</p>
-      </div>
-
-
-      <!-- Try it ─────────────────────────────────────────── -->
-      <div class="try-demo">
-        <p>Click these a few times, then press <kbd>Alt+Shift+R</kbd> to see the heatmap:</p>
-
-        <div class="demo-buttons">
-          <button class="btn-primary"   data-ut-label="Primary button">Primary <span class="click-count" aria-hidden="true">(0)</span></button>
-          <button class="btn-secondary" data-ut-label="Secondary button">Secondary <span class="click-count" aria-hidden="true">(0)</span></button>
+          <a class="btn-hero-secondary" href="https://github.com/colourandcode1/recap" data-ut-label="View on GitHub hero link">View on GitHub</a>
         </div>
       </div>
 
 
-      <!-- Highlights (condensed from the full "what it captures" list) -->
+      <!-- Demo ───────────────────────────────────────────── -->
+      <div class="section-intro">
+        <h2>This page is running Recap right now.</h2>
+        <p>Click around a few times, then press <kbd>Alt+Shift+Y</kbd> to see the heatmap of your own session.</p>
+      </div>
+
+      <!-- What it records ────────────────────────────────── -->
+      <div class="section-intro">
+        <h2>What it records</h2>
+      </div>
+
       <dl class="highlights">
         <div class="highlight">
           <dt>Clicks</dt>
@@ -103,94 +91,38 @@
         </div>
       </dl>
 
-      <p class="cta-line"><a href="how-it-works.html" data-ut-label="How it works CTA link">Read how it works →</a></p>
 
-      <!-- Value headline -->
-      <div class="section-intro">
-        <h2>A Hotjar alternative that never leaves the room.</h2>
-        <p>No cookies. No accounts. Nothing leaves the device unless they export it.</p>
-      </div>
+      <!-- How you use it ───────────────────────────────── -->
+      <h2 class="rule-heading">How you use it</h2>
 
-      <!-- Feature grid -->
-      <div class="feature-grid">
-        <div class="feature-card">
-          <h3>No Backend</h3>
-          <p>Click heatmaps, scroll depth, and session capture — zero cookies, zero accounts.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Built for AI Prototypes</h3>
-          <p>A script tag under 10KB. Drops into Claude artefacts, Vercel previews, and Framer mocks.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Export for AI</h3>
-          <p>A written narrative Claude or ChatGPT can reason about, not raw x/y coordinates.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Open Source <span class="feature-tag">MIT</span></h3>
-          <p>MIT-licensed on npm as recap-ux. No subscription, fully auditable.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Mobile &amp; Web</h3>
-          <p>Alt+Shift+R on desktop. A hidden three-finger hold on phone and tablet.</p>
-        </div>
-      </div>
+      <ol class="steps">
+        <li>Add the script tag to your prototype.</li>
+        <li>Let people click through it as they normally would.</li>
+        <li>Press <kbd>Alt+Shift+Y</kbd> (or hold three fingers on mobile) to open the panel.</li>
+        <li>Review heatmaps, scroll depth and flows, or export a summary.</li>
+      </ol>
 
-      <!-- Tour: one trigger, three places -->
-      <div class="section-intro">
-        <h2>One trigger, three places.</h2>
-        <p>The same heatmap and session capture, wherever the test is actually happening.</p>
-      </div>
+      <!-- How agents use it ─────────────────────────────── -->
+      <h2 class="rule-heading">Why it's different</h2>
 
-      <div class="tour">
-        <div class="tabs" role="tablist">
-          <button class="tab active" data-tab="desktop" role="tab" aria-selected="true" data-ut-label="Tour tab: Desktop">Desktop</button>
-          <button class="tab" data-tab="mobile" role="tab" aria-selected="false" data-ut-label="Tour tab: Mobile & Tablet">Mobile &amp; Tablet</button>
-          <button class="tab" data-tab="prototype" role="tab" aria-selected="false" data-ut-label="Tour tab: AI Prototype">AI Prototype</button>
-        </div>
-        <div class="tour-panel">
-          <p class="tour-caption" data-tab-content="desktop">Press <kbd>Alt+Shift+R</kbd> and the panel opens instantly — no on-screen trigger for the participant to notice.</p>
-          <p class="tour-caption" data-tab-content="mobile" hidden>A hidden three-finger hold, 1.5 seconds. Same panel, no visible button.</p>
-          <p class="tour-caption" data-tab-content="prototype" hidden>Drop the script tag into a Claude artefact, Vercel preview, or Framer mock — the panel is already there.</p>
-        </div>
-      </div>
+      <p class="rule-intro">Paste the exported summary into Claude, ChatGPT or any coding agent. Recap is built to be read by them.</p>
 
-      <!-- Environment grid -->
-      <div class="section-intro">
-        <h2>Runs anywhere a prototype does.</h2>
-        <p>Claude artefacts, Vercel previews, Framer, v0, Replit, or your own local dev server — if it renders in a browser, Recap can watch it.</p>
-      </div>
+      <ul class="agent-points">
+        <li><strong>One line to start.</strong> No build step, accounts or backend.</li>
+        <li><strong>Runs anywhere.</strong> Anywhere a script tag runs: Claude artifacts, Vercel previews, Framer or localhost.</li>
+        <li><strong>Private by design.</strong> No cookies. Data stays on the device until you export it.</li>
+        <li><strong>Built for AI.</strong> A plain-English session summary, friction included.</li>
+        <li><strong>Open source.</strong> MIT licensed. Read it, fork it, run it yourself.</li>
+      </ul>
 
-      <div class="env-grid">
-        <span class="env-item">Claude</span>
-        <span class="env-item">Vercel</span>
-        <span class="env-item">Framer</span>
-        <span class="env-item">v0</span>
-        <span class="env-item">Replit</span>
-        <span class="env-item">CodeSandbox</span>
-        <span class="env-item">Lovable</span>
-        <span class="env-item">localhost</span>
-      </div>
 
-      <!-- Technical credibility band -->
-      <div class="section-intro">
-        <h2>Ten kilobytes. Zero servers.</h2>
-        <p>One script tag, no build step, no backend to run or pay for. Every capture stays on the participant's machine until they choose to export it.</p>
-      </div>
-
-      <div class="pill-row">
-        <span class="pill-badge">&lt;10KB script</span>
-        <span class="pill-badge">MIT licensed</span>
-        <span class="pill-badge">No backend</span>
-      </div>
-
-      <!-- Closing CTA -->
+      <!-- Closing CTA ────────────────────────────────────── -->
       <div class="closing-cta">
-        <h2>Start testing your AI prototypes.</h2>
+        <h2>Try it on your next prototype.</h2>
         <div class="install-line">
           <code>npm install recap-ux</code>
           <button class="copy-btn" id="copy-install-btn" type="button" data-ut-label="Copy install command">Copy</button>
         </div>
-        <p class="closing-sub">Free &amp; open source · MIT licensed · <a href="https://github.com/colourandcode1/recap" data-ut-label="GitHub closing CTA link">GitHub</a></p>
       </div>
 
     </div><!-- /.container -->
@@ -198,14 +130,16 @@
 
   <!-- ── Footer ──────────────────────────────────────────── -->
   <footer>
-    <div class="container">
-      <p>Created by <a href="https://www.tonycraig.co" data-ut-label="Tony Craig footer link">Tony Craig</a>. Source on <a href="https://github.com/colourandcode1/recap" data-ut-label="GitHub footer link">GitHub</a>.</p>
+    <div class="container footer-inner">
       <p class="footer-copyright">© 2026 Recap.</p>
+      <p class="footer-credit">
+        <a href="https://www.tonycraig.co" data-ut-label="Tony Craig footer link">Created by Tony Craig<svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2.5 7.5L7.5 2.5M3.5 2.5h4v4" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </p>
     </div>
   </footer>
 
   <!-- Interactive demo logic -->
-  <script src="script.js"></script>
+  <script src="script.js?v=4"></script>
 
   <!--
     Recap itself — the page IS the demo.
@@ -214,7 +148,7 @@
   -->
   <script
     defer
-    src="https://cdn.jsdelivr.net/npm/recap-ux@1/dist/recap.min.js"
+    src="https://cdn.jsdelivr.net/npm/recap-ux@1.1.0/dist/recap.min.js"
     data-session-name="recap-ux-com-visitor"
   ></script>
 

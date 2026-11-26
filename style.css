@@ -365,47 +365,6 @@ kbd {
   font-size:   1rem;
 }
 
-/* --- Feature grid ---------------------------------------------------- */
-.feature-grid {
-  display:               grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:                   1.25rem;
-  margin:                0 0 1rem;
-}
-
-.feature-card {
-  background:    var(--color-surface);
-  border:        1px solid var(--color-border);
-  border-radius: 8px;
-  padding:       1.25rem 1.375rem;
-}
-
-.feature-card h3 {
-  display:      flex;
-  align-items:  center;
-  gap:          0.5rem;
-  margin:       0 0 0.5rem;
-  font-size:    0.9375rem;
-}
-
-.feature-card p {
-  margin:      0;
-  font-size:   0.875rem;
-  color:       var(--color-muted);
-  line-height: 1.5;
-}
-
-.feature-tag {
-  font-family:    var(--font-mono);
-  font-size:      0.625rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color:          var(--color-faint);
-  background:     var(--color-pill);
-  border-radius:  999px;
-  padding:        0.15rem 0.5rem;
-}
-
 /* --- Tour (tab bar over a caption) -------------------------------------- */
 .tour {
   max-width:     560px;
@@ -547,62 +506,51 @@ kbd {
   color:     var(--color-muted);
 }
 
-/* --- Try it demo --------------------------------------------------- */
-.try-demo {
-  background:    var(--color-surface);
-  border:        1px solid var(--color-border);
-  border-radius: 6px;
-  padding:       1.5rem 1.5rem 1.125rem;
-  margin:        1.5rem 0 1.5rem;
-}
-
-.try-demo > p {
-  margin-bottom: 0.75rem;
-  font-size:     0.9375rem;
-}
-
-.demo-buttons {
+/* --- How it works (rule headings, left-aligned) ------------------- */
+.rule-heading {
   display:     flex;
-  gap:         0.5rem;
-  flex-wrap:   wrap;
-  margin:      0.125rem 0 1rem;
   align-items: center;
+  gap:         0.75rem;
+  font-family: var(--font-sans);
+  font-size:   1rem;
+  font-weight: 600;
+  color:       var(--color-text);
+  border-top:  none;
+  padding-top: 0;
+  margin:      4rem 0 1.25rem;
 }
 
-.btn-primary {
-  background:    var(--color-text);
-  color:         #fff;
-  border:        1px solid var(--color-text);
-  padding:       0.3rem 0.875rem;
-  border-radius: 4px;
-  font-size:     0.875rem;
-  cursor:        pointer;
-  font-family:   var(--font-sans);
-  line-height:   1.5;
-  transition:    background 0.15s;
+.rule-heading::after {
+  content:    "";
+  flex:       1;
+  height:     1px;
+  background: var(--color-border);
 }
 
-.btn-primary:hover { background: #333; border-color: #333; }
-
-.btn-secondary {
-  background:    transparent;
-  color:         var(--color-text);
-  border:        1px solid var(--color-border-hover);
-  padding:       0.3rem 0.875rem;
-  border-radius: 4px;
-  font-size:     0.875rem;
-  cursor:        pointer;
-  font-family:   var(--font-sans);
-  line-height:   1.5;
-  transition:    border-color 0.15s;
+.highlights + .rule-heading {
+  margin-top: 0;
 }
 
-.btn-secondary:hover { border-color: #888; }
+.steps {
+  padding-left: 1.5rem;
+}
 
-.click-count {
-  opacity:     0.6;
-  font-size:   0.85em;
-  font-variant-numeric: tabular-nums;
+.steps li::marker {
+  color: var(--color-faint);
+}
+
+.rule-intro {
+  color:  var(--color-muted);
+  margin: 0 0 1rem;
+}
+
+.agent-points {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.agent-points li::marker {
+  color: var(--color-faint);
 }
 
 /* --- Footer -------------------------------------------------------- */
@@ -618,15 +566,32 @@ footer p {
   margin:    0;
 }
 
-.footer-copyright {
-  margin-top: 0.5rem;
-  color:      var(--color-faint);
+.footer-inner {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+  flex-wrap:       wrap;
+  gap:             0.5rem 1rem;
 }
+
+.footer-copyright { color: var(--color-faint); }
+
+.footer-credit a {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             0.35rem;
+  color:           var(--color-muted);
+  text-decoration: none;
+  transition:      color 0.15s;
+}
+
+.footer-credit a:hover { color: var(--color-text); }
+
+.footer-credit svg { flex-shrink: 0; }
 
 /* --- Responsive ------------------------------------------------------ */
 @media (max-width: 640px) {
   .highlights    { grid-template-columns: 1fr; gap: 1.25rem; }
-  .feature-grid  { grid-template-columns: 1fr; }
   .tabs          { gap: 0.4rem; }
 }
 

@@ -14,37 +14,6 @@
     });
   }
 
-  /* ── Try-it demo: per-button click count in brackets ──── */
-  document.querySelectorAll('.try-demo button').forEach(function (btn) {
-    var countEl = btn.querySelector('.click-count');
-    var count = 0;
-
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      if (!countEl) return;
-      count += 1;
-      countEl.textContent = '(' + count + ')';
-    });
-  });
-
-  /* ── Tour tabs: swap the active tab and matching caption ── */
-  var tabs = document.querySelectorAll('.tab');
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      var target = tab.getAttribute('data-tab');
-
-      tabs.forEach(function (t) {
-        var isActive = t === tab;
-        t.classList.toggle('active', isActive);
-        t.setAttribute('aria-selected', isActive ? 'true' : 'false');
-      });
-
-      document.querySelectorAll('[data-tab-content]').forEach(function (panel) {
-        panel.hidden = panel.getAttribute('data-tab-content') !== target;
-      });
-    });
-  });
-
   /* ── Closing CTA: copy install command ─────────────────── */
   var copyBtn = document.getElementById('copy-install-btn');
   if (copyBtn) {
